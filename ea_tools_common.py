@@ -137,6 +137,6 @@ def save_text_to_file(text, title="Save output as"):
     path = ida_kernwin.ask_file(1, "*.txt", title)
     if not path:
         return None
-    with open(path, "w") as f:
+    with open(path, "w", encoding="utf-8") as f:
         f.write(text)
     return path
